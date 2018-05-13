@@ -1,0 +1,57 @@
+<div class="panel panel-default hidden-sm hidden-xs">
+  <table *ngIf="show" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Platform</th>
+        <th>Score</th>
+        <th>Genre</th>
+        <th>Editors Choice</th>
+        <th>Release Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of games">
+        <td>{{item.title}}</td>
+        <td>{{item.platform}}</td>
+        <td>{{item.score}}</td>
+        <td>{{item.genre}}</td>
+        <td>{{item.editors_choice}}</td>
+        <td>{{item.release_year}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="visible-xs visible-sm">
+  <div class="row">
+    <div class="col-sm-6" *ngFor="let item of games">
+    <div class="panel panel-danger">
+      <div class="panel-heading">
+        {{item.title}}
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-6">Platform</div>
+          <div class="col-sm-6">{{item.platform}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">Score</div>
+          <div class="col-sm-6">{{item.score}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">Genre</div>
+          <div class="col-sm-6">{{item.genre}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">Editors Choice</div>
+          <div class="col-sm-6">{{item.editors_choice}}</div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">Release Year</div>
+          <div class="col-sm-6">{{item.release_year}}</div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
